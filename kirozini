@@ -89,11 +89,12 @@ game:GetService("ReplicatedStorage"):WaitForChild("Pull"):FireServer(unpack(args
 end)
 
 local marbles = Gamehacks:NewSection("Marbles")
-glass:NewButton("Choose Game", "The option to choose between EvenOdd or Marbles.", function()
+marbles:NewButton("Choose Game", "The option to choose between EvenOdd or Marbles.", function()
 local PlayerGui = game.Players.LocalPlayer.PlayerGui
 local frontmanui = PlayerGui.FrontmanUI
 frontmanui.MarbleChoose.Visible = true
 end)
+
 local glass = Gamehacks:NewSection("Glass Bridge")
 glass:NewButton("Break Fake Glass", "Break all the fake glasses on the brigde.", function()
 local args = {
