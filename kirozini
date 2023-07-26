@@ -1,6 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Green Light Red Light Gamepasses - dpans", "Midnight")
-local LocalPlayer = Window:NewTab("LocalPlayer")
 local Gamepasses = Window:NewTab("Gamepasses")
 local Gamehacks = Window:NewTab("Auto Wins")
 
@@ -21,22 +20,6 @@ gp:NewButton("Become Guard", "Become a Guard this match.", function()
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GuardRemotes"):WaitForChild("BecomeGuard"):InvokeServer(unpack(args))
-end)
-
--- LocalPlayer
-
-local lp = LocalPlayer:NewSection("Movement")
-
-lp:NewToggle("Fast Walk", "Flash walk speed", function(state)
-    if state then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
-    else
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    end
-end)
-
-lp:NewButton("Infinity Yield", "Open an admin script (fly, jumppower, etc...)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
 
 -- Auto Wins
